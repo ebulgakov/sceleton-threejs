@@ -1,0 +1,4 @@
+.divshot-cache
+.idea
+dist
+node_modules
