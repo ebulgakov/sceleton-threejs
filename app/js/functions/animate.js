@@ -1,8 +1,8 @@
 'use strict';
 
-	var stats = require('./stats')();
-	var actions = require('./actions')();
-	var actionsConfig = require('../actions_config');
+var stats = require('./stats')();
+var actions = require('./actions')();
+var actionsConfig = require('../actions_config');
 
 module.exports = function render () {
   requestAnimationFrame(function () {
@@ -12,8 +12,7 @@ module.exports = function render () {
   	object.renderer.render(object.scene, object.camera);
   });
 
-  stats.begin();
+  if (stats) stats.begin();
   actions.run();
-  stats.end();
-
+  if (stats) stats.end();
 };

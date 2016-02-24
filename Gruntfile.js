@@ -94,10 +94,23 @@ module.exports = function (grunt) {
           src: [
             'i/**/*'
           ]
+        },
+        {
+          expand: true,
+          dot: true,
+          cwd: 'node_modules',
+          dest: 'dist/libs',
+          flatten: true,
+          src: [
+            'three/three.js',
+            'tween.js/src/Tween.js',
+            'stats.js/build/stats.min.js',
+            '../app/js/libs/dat.gui.js'
+          ]
         }]
       }
     },
-    clean: ['dist'],
+    clean: ['dist', '.tmp'],
     concurrent: {
       load: [
         'copy',

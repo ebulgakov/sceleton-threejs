@@ -1,14 +1,27 @@
 'use strict';
 
-var config = require('../config');
+var gControl = require('../functions/datgui')('Helper');
 
-module.exports = function (scene) {
+
+module.exports = function (parameters) {
   var helper;
+  var scene = parameters.scene;
+  var size = parameters.config.size;
 
-  helper = new THREE.BoxHelper( new THREE.Mesh( new THREE.BoxGeometry( config.size.width, config.size.height, config.size.width ) ) );
+  var options = {
+    visible: false,
+    position: {
+      x: 0,
+      y: 0,
+      z: 0
+    }
+  };
+  helper = new THREE.BoxHelper( new THREE.Mesh( new THREE.BoxGeometry( size.width, size.height, size.width ) ) );
   helper.material.color.setHex( 0xff0000 );
   helper.material.transparent = true;
-  //helper.position.x = config.size.width / 2;
+
+  new gControl(options, helper, 'visible');
+  new gControl(options.position, helper.position, ['x', 'y', 'z'], 100);
 
 
   scene.add( helper );

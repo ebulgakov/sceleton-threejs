@@ -1,6 +1,4 @@
 'use strict';
-window.THREE = require('three.js');
-window.TWEEN = require('tween.js');
 require('./functions/animate')();
 
 
@@ -13,6 +11,7 @@ require('./functions/animate')();
 	require('./functions/orbit_controls')(parameters);
 
 	require('./models/intro')(parameters);
+	require('./models/box')(parameters);
 })('introTHREE');
 
 
