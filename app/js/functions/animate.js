@@ -4,7 +4,7 @@ var stats = require('./stats')();
 var actions = require('./actions')();
 var actionsConfig = require('../actions_config');
 
-module.exports = function render () {
+function render () {
   requestAnimationFrame(function () {
   	render();
   });
@@ -15,4 +15,6 @@ module.exports = function render () {
   if (stats) stats.begin();
   actions.run();
   if (stats) stats.end();
-};
+}
+
+export default render;

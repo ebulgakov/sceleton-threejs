@@ -1,5 +1,5 @@
 'use strict';
-require('./functions/animate')();
+import './functions/animate';
 
 
 (function (container) {
@@ -12,7 +12,7 @@ require('./functions/animate')();
 
 	require('./models/intro')(parameters);
 	require('./models/box')(parameters);
-})('introTHREE');
+})('ThreeJSContainer');
 
 
 

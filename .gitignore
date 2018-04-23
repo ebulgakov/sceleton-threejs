@@ -1,4 +1,4 @@
-.divshot-cache
 .idea
-dist
+dist/libs/
+dist/bundle.js
 node_modules
