@@ -1,10 +1,11 @@
-'use strict';
-var config = require('../config')();
+import config from '../config';
+import dat from 'dat.gui';
+
 var container = new dat.GUI();
 container.close();
 
 
-module.exports = function (name) {
+export default function (name) {
   var debug = typeof dat != 'undefined' && config.debug == true;
 
   if (typeof dat == 'undefined' && config.debug == true) {

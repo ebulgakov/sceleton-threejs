@@ -1,8 +1,8 @@
-'use strict';
-var config = require('../config')();
+import Stats from "stats.js";
+import config from "../config";
 
 
-module.exports = function () {
+export default function () {
 	var debug = typeof Stats != 'undefined' && config.debug == true;
 
 	if (typeof Stats == 'undefined' && config.debug == true) {

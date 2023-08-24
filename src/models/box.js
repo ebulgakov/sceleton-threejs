@@ -1,12 +1,10 @@
-'use strict';
+import initControl from '../functions/datgui';
 
-var gControl = require('../functions/datgui')('Helper');
-
-
-module.exports = function (parameters) {
+export default function (parameters) {
   var helper;
   var scene = parameters.scene;
   var size = parameters.config.size;
+  var gControl = initControl('Helper');
 
   var options = {
     visible: false,

@@ -1,6 +1,7 @@
 'use strict';
-var actionsConfig = require('../actions_config');
-module.exports = function (add) {
+import actionsConfig from '../actions_config';
+
+export default function (add) {
   var actions = actionsConfig.actions;
 
   actions.run = function () {

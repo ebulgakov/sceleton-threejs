@@ -1,7 +1,4 @@
-'use strict';
-
-
-module.exports = function (scene, config) {
+export default function (scene, config) {
   var camera;
 
   camera = new THREE.PerspectiveCamera(config.lookCamera, config.size.width/config.size.height, 1, 10000);

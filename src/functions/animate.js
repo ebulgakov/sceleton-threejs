@@ -1,10 +1,10 @@
-'use strict';
+import initStats from './stats';
+import initActions from './actions';
+import actionsConfig from '../actions_config';
 
-var stats = require('./stats')();
-var actions = require('./actions')();
-var actionsConfig = require('../actions_config');
-
-module.exports = function render () {
+export default function render () {
+  const stats = initStats();
+  const actions = initActions();
   requestAnimationFrame(function () {
   	render();
   });
