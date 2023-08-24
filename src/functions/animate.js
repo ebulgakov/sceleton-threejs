@@ -1,8 +1,7 @@
-import istats from './stats';
+import initStats from './stats';
 import actions from './actions';
 import actionsConfig from '../actions_config';
-
-const stats = istats();
+const stats = initStats();
 
 (function animate () {
   requestAnimationFrame(animate);
