@@ -2,10 +2,7 @@
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 export default function (parameters) {
-  var oControls;
+  const container = document.getElementById(parameters.config.container);
 
-  var container = document.getElementById(parameters.config.container);
-  oControls = new OrbitControls( parameters.camera, container );
-
-  return oControls;
+  return new OrbitControls( parameters.camera, container );
 };

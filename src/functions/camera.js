@@ -1,11 +1,9 @@
 export default function (scene, config) {
-  var camera;
-
-  camera = new THREE.PerspectiveCamera(config.lookCamera, config.size.width/config.size.height, 1, 10000);
+  const camera = new THREE.PerspectiveCamera(config.lookCamera, config.size.width/config.size.height, 1, 10000);
   camera.position.z = config.size.height;
 
-  var ambiColor = 0xffffff;
-  var ambientLight = new THREE.AmbientLight(ambiColor);
+  const ambiColor = 0xffffff;
+  const ambientLight = new THREE.AmbientLight(ambiColor);
   scene.add(ambientLight);
 
   var light = new THREE.SpotLight( 0xffffff, .5);

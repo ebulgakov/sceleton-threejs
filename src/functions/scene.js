@@ -1,3 +1,3 @@
 'use strict';
 
-export default () =>  new THREE.Scene()
+export default () => new THREE.Scene();

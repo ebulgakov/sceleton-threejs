@@ -2,7 +2,7 @@
 import actionsConfig from '../actions_config';
 
 export default function (add) {
-  var actions = actionsConfig.actions;
+  const actions = actionsConfig.actions;
 
   actions.run = function () {
     for(var i = 0; i < actions.length; i++) {

@@ -1,9 +1,7 @@
 'use strict';
 export default function (config) {
- var container, renderer;
-
-  container = document.getElementById(config.container);
-  renderer = new THREE.WebGLRenderer({
+  const container = document.getElementById(config.container);
+  const renderer = new THREE.WebGLRenderer({
     antialias: true,
     transparent: true,
     alpha: true

@@ -1,20 +1,18 @@
 import config from '../config';
 import dat from 'dat.gui';
 
-var container = new dat.GUI();
+const container = new dat.GUI();
 container.close();
 
 
 export default function (name) {
-  var debug = typeof dat != 'undefined' && config.debug == true;
+  const debug = typeof dat !== 'undefined' && config.debug === true;
 
-  if (typeof dat == 'undefined' && config.debug == true) {
+  if (typeof dat === 'undefined' && config.debug === true) {
     console.info('Debug was activated, but dat.gui.js wasn\'t inject')
   }
 
-  if (debug) {
-    var gui = container.addFolder(name || 'Object');
-  }
+  const gui = debug ? container.addFolder(name || 'Object') : null;
 
   return function (obj, sbj, param, extremum) {
     if (typeof param == 'string') {
