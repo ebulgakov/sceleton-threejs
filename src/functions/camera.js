@@ -14,7 +14,7 @@ export default function (scene, config) {
   light.angle = 1.5;
   light.shadow.bias = 1000;
   light.shadow.darkness = 100;
-  //scene.add( light );
+  scene.add( light );
 
   return camera;
 };
